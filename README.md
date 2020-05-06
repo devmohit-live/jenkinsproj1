@@ -1,5 +1,6 @@
-# Objective : Setup up an infrastructure such as there are three teams/environemnts :
+# Objective : 
 
+Setup up an infrastructure such as there are three teams/environemnts :
 1. Production
 2. Testing
 3. Quality Assurance
