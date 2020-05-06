@@ -21,31 +21,42 @@ Production Team will will deploy the code first, now there is some work going on
    1. Dev and Master branch will be merged
    2. Code will be pushed to the github
    3. job 1 and job2 will be build
-
+   * job1 and job2 are independent of job3 so you maynot need to add them to job3  as an downstream job, but I have done this to be on safe side. :-)
 ## Here are some Images:
 
 ## 1. Initially:
 
 1. Production:
+
    ![Producntion](https://raw.githubusercontent.com/devmohit-live/Images_of_repo/master/pro01.JPG)
 2. Testing :
+
    ![Testing](https://raw.githubusercontent.com/devmohit-live/Images_of_repo/master/test01.JPG)
 
 ## 2. Changed made but not approved:
 
 1. Produnction:
+
    ![Producntion](https://raw.githubusercontent.com/devmohit-live/Images_of_repo/master/pro01.JPG)
+
 2. Testing :
+
    ![Testing](https://raw.githubusercontent.com/devmohit-live/Images_of_repo/master/test02.JPG)
+
 3. QA Rejected
 
 ## Changed and approved:
 
 1. Testing :
+
    ![Testing](https://raw.githubusercontent.com/devmohit-live/Images_of_repo/master/test03.JPG)
+
 2. QA Approved:
+
    ![QA0](https://raw.githubusercontent.com/devmohit-live/Images_of_repo/master/qa0.JPG)
+ 
    ![QA1](https://raw.githubusercontent.com/devmohit-live/Images_of_repo/master/qa1.JPG)
+   
    ![QA2](https://raw.githubusercontent.com/devmohit-live/Images_of_repo/master/qa2_log.JPG)
 
 3. Production:
