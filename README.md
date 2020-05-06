@@ -46,80 +46,116 @@ Production Team will deploy the code first, now there is some work going on in t
 
    ![edit](https://raw.githubusercontent.com/devmohit-live/Images_of_repo/master/localhook.JPG)
 
-   ![](https://raw.githubusercontent.com/devmohit-live/Images_of_repo/master/mergeproof.JPG)
+   ![merges](https://raw.githubusercontent.com/devmohit-live/Images_of_repo/master/mergeproof.JPG)
 
 2. Added The webhooks to the Jenkins Github API :=> ip/github-webhook/
 
-   ![Producntion](https://raw.githubusercontent.com/devmohit-live/Images_of_repo/master/webhooks.JPG)
+![Producntion](https://raw.githubusercontent.com/devmohit-live/Images_of_repo/master/webhooks.JPG)
+
 
 ## Screenshots :
 
 ## 1. Initially:
 
 1. Production:
-   ![Producntion](https://raw.githubusercontent.com/devmohit-live/Images_of_repo/master/pro01.JPG)
+
+![Producntion](https://raw.githubusercontent.com/devmohit-live/Images_of_repo/master/pro01.JPG)
+
 2. Testing :
-   ![Testing](https://raw.githubusercontent.com/devmohit-live/Images_of_repo/master/test01.JPG)
+
+![Testing](https://raw.githubusercontent.com/devmohit-live/Images_of_repo/master/test01.JPG)
 
 ## 2. Changed made but not approved:
 
 1. Produnction:
-   ![Producntion](https://raw.githubusercontent.com/devmohit-live/Images_of_repo/master/pro01.JPG)
+
+![Producntion](https://raw.githubusercontent.com/devmohit-live/Images_of_repo/master/pro01.JPG)
+
+
 2. Testing :
-   ![Testing](https://raw.githubusercontent.com/devmohit-live/Images_of_repo/master/test02.JPG)
+
+![Testing](https://raw.githubusercontent.com/devmohit-live/Images_of_repo/master/test02.JPG)
+
+
 3. QA Rejected
 
 ## Changed and approved:
 
 1. Testing :
-   ![Testing](https://raw.githubusercontent.com/devmohit-live/Images_of_repo/master/test03.JPG)
+
+![Testing](https://raw.githubusercontent.com/devmohit-live/Images_of_repo/master/test03.JPG)
+
+
 2. QA Approved:
-   ![QA0](https://raw.githubusercontent.com/devmohit-live/Images_of_repo/master/qa0.JPG)
-   ![QA1](https://raw.githubusercontent.com/devmohit-live/Images_of_repo/master/qa1.JPG)
-   ![QA2](https://raw.githubusercontent.com/devmohit-live/Images_of_repo/master/qa2_log.JPG)
+
+![QA0](https://raw.githubusercontent.com/devmohit-live/Images_of_repo/master/qa0.JPG)
+   
+
+![QA1](https://raw.githubusercontent.com/devmohit-live/Images_of_repo/master/qa1.JPG)
+   
+
+![QA2](https://raw.githubusercontent.com/devmohit-live/Images_of_repo/master/qa2_log.JPG)
+
 
 3. Production:
+
    ![Producntion](https://raw.githubusercontent.com/devmohit-live/Images_of_repo/master/finalprod.JPG)
+
 
 ## Steps and Configurations Screenshots :
 
 ## 1. Production:
 
-    1. Created a job for cloning the Github repo's master branch which is to be deployed on docker.
-    Github Githook trigger is checked so that whenever the developer pushes the code, github webhook will be activated and it will contact jenkins, then jenkins will pull the updated code, and move it to the created volume.
+* Created a job for cloning the Github repo's master branch which is to be deployed on docker.
+Github Githook trigger is checked so that whenever the developer pushes the code, github webhook will be activated and it will    contact jenkins, then jenkins will pull the updated code, and move it to the created volume.
+
 
 ![01](https://raw.githubusercontent.com/devmohit-live/Images_of_repo/master/1a01.JPG)
 
-    2. Provided the command to check wether the docker conatiner is already running, if not create it mount the volume and expose it's port 80 to base os port 8082.
+
+* Provided the command to check wether the docker conatiner is already running, if not create it mount the volume and expose it's port 80 to base os port 8082.
+
 
 ![02](https://raw.githubusercontent.com/devmohit-live/Images_of_repo/master/1a02.JPG)
 
+
 ## 2. Testing:
 
-    1. Created a job for cloning the Github repo's master branch which is to be deployed on docker.
-    Github Githook trigger is checked so that whenever the developer pushes the code, github webhook will be activated and it will contact jenkins, then jenkins will pull the updated code, and move it to the created volume.
+* Created a job for cloning the Github repo's master branch which is to be deployed on docker.
+Github Githook trigger is checked so that whenever the developer pushes the code, github webhook will be activated and it will contact jenkins, then jenkins will pull the updated code, and move it to the created volume.
+
 
 ![01](https://raw.githubusercontent.com/devmohit-live/Images_of_repo/master/1b.JPG)
 
-    2. Provided the command to check wether the docker conatiner is already running, if not create it mount the volume and expose it's port 80 to base os port 8083
-    QA team will check the testing environment at this port address.
+
+* Provided the command to check wether the docker conatiner is already running, if not create it mount the volume and expose it's port 80 to base os port 8083
+QA team will check the testing environment at this port address.
+
 
 ![02](https://raw.githubusercontent.com/devmohit-live/Images_of_repo/master/1b02.JPG)
 
+
 ## 2. QA Team :
 
-    1. Provided the github repo link along with credentials as on approval there should be a merge between the master and dev branch, and also the code should be pushed to github.
+* Provided the github repo link along with credentials as on approval there should be a merge between the master and dev branch, and also the code should be pushed to github.
+
 
 ![01](https://raw.githubusercontent.com/devmohit-live/Images_of_repo/master/1c00.JPG)
 
-    2. Details is provided to the additional behaviour so that merging could be done.
+
+* Details is provided to the additional behaviour so that merging could be done.
+
 
 ![02](https://raw.githubusercontent.com/devmohit-live/Images_of_repo/master/1c01.JPG)
 
-    3. Post Build Action deatils provided, so that push after the merge can be done
+
+* Post Build Action deatils provided, so that push after the merge can be done
+
 
 ![02](https://raw.githubusercontent.com/devmohit-live/Images_of_repo/master/1c03.JPG)
 
-    4. After the push is being done. This job will call the job1 and job2 so that the code can be updated. (This part can be omitted as webhook will do it's job, but to be on safe side, I have put these projects as downstream projects)
+
+* After the push is being done. This job will call the job1 and job2 so that the code can be updated. (This part can be omitted as webhook will do it's job, but to be on safe side, I have put these projects as downstream projects)
+
 
 ![02](https://raw.githubusercontent.com/devmohit-live/Images_of_repo/master/1c04.JPG)
