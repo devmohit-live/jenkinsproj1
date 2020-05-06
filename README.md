@@ -1,4 +1,7 @@
-# Objective :# Objective :
+![dockerbg](https://skywell.software/wp-content/uploads/2019/04/what-is-devops-1024x630.jpg)
+
+
+# Objective :
 
 Setup up an infrastructure such as there are three teams/environemnts :
 
